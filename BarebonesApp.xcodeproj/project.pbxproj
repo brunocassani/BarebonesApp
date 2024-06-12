@@ -11,6 +11,7 @@
 		53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D157FC2C1930F3009A95CD /* ContentView.swift */; };
 		53D157FF2C1930F8009A95CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D157FE2C1930F8009A95CD /* Assets.xcassets */; };
 		53D158032C1930F8009A95CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D158022C1930F8009A95CD /* Preview Assets.xcassets */; };
+		53D1580A2C1931B3009A95CD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D158092C1931B3009A95CD /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		53D157FE2C1930F8009A95CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D158002C1930F8009A95CD /* BarebonesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BarebonesApp.entitlements; sourceTree = "<group>"; };
 		53D158022C1930F8009A95CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53D158092C1931B3009A95CD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */,
+				53D158092C1931B3009A95CD /* DataModel.swift */,
 				53D157FC2C1930F3009A95CD /* ContentView.swift */,
 				53D157FE2C1930F8009A95CD /* Assets.xcassets */,
 				53D158002C1930F8009A95CD /* BarebonesApp.entitlements */,
@@ -141,6 +144,7 @@
 			files = (
 				53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */,
 				53D157FB2C1930F3009A95CD /* BarebonesAppApp.swift in Sources */,
+				53D1580A2C1931B3009A95CD /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
