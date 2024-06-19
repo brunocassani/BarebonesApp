@@ -6,31 +6,41 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct ClimateData {
-    var temperature1: String = ""
-    var humidity: String = ""
-    var pressure: String = ""
-    var temperature2: String = ""
+class ClimateData: ObservableObject {
+    @Published var temperature: Double = 0.0
+    @Published var humidity: Double = 0.0
+    @Published var pressure: Double = 0.0
+    @Published var dew: Double = 0.0
 }
 
-struct BowData {
-    var peepToArrow: String = ""
-    var peepToPin: String = ""
+class BowData: ObservableObject {
+    @Published var peepToArrow: Double = 0.0
+    @Published var peepToPin: Double = 0.0
 }
 
-struct SightData {
-    var range1: String = ""
-    var mark1: String = ""
-    var range2: String = ""
-    var mark2: String = ""
-    var distanceBetween1And2: String = ""
+class SightData: ObservableObject {
+    @Published var range1: Double = 0.0
+    @Published var mark1: Double = 0.0
+    @Published var range2: Double = 0.0
+    @Published var mark2: Double = 0.0
+    @Published var distanceBetween1And2: Double = 0.0
 }
 
-struct ArrowData {
-    var speed: String = ""
-    var weight: String = ""
-    var diameter: String = ""
-    var length: String = ""
-    var foc: String = ""
+class ArrowData: ObservableObject {
+    @Published var speed: Double = 0.0
+    @Published var weight: Double = 0.0
+    @Published var diameter: Double = 0.0
+    @Published var length: Double = 0.0
+    @Published var foc: Double = 0.0
+}
+
+extension NumberFormatter {
+    static var decimal: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }
 }

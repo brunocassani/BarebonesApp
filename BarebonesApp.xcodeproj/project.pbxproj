@@ -55,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */,
-				53D158092C1931B3009A95CD /* DataModel.swift */,
 				53D157FC2C1930F3009A95CD /* ContentView.swift */,
+				53D158092C1931B3009A95CD /* DataModel.swift */,
 				53D157FE2C1930F8009A95CD /* Assets.xcassets */,
 				53D158002C1930F8009A95CD /* BarebonesApp.entitlements */,
 				53D158012C1930F8009A95CD /* Preview Content */,
