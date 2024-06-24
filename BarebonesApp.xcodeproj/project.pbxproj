@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5343BFB12C29B0B8008773E6 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343BFB02C29B0B8008773E6 /* PDFView.swift */; };
 		53D157FB2C1930F3009A95CD /* BarebonesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */; };
 		53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D157FC2C1930F3009A95CD /* ContentView.swift */; };
 		53D157FF2C1930F8009A95CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D157FE2C1930F8009A95CD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		530D225B2C2328B9004DBBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5343BFB02C29B0B8008773E6 /* PDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
 		53D157F72C1930F3009A95CD /* BarebonesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarebonesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarebonesAppApp.swift; sourceTree = "<group>"; };
 		53D157FC2C1930F3009A95CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				530D225B2C2328B9004DBBE7 /* Info.plist */,
 				53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */,
 				53D157FC2C1930F3009A95CD /* ContentView.swift */,
+				5343BFB02C29B0B8008773E6 /* PDFView.swift */,
 				53D158092C1931B3009A95CD /* DataModel.swift */,
 				53D157FE2C1930F8009A95CD /* Assets.xcassets */,
 				53D158002C1930F8009A95CD /* BarebonesApp.entitlements */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */,
+				5343BFB12C29B0B8008773E6 /* PDFView.swift in Sources */,
 				53D157FB2C1930F3009A95CD /* BarebonesAppApp.swift in Sources */,
 				53D1580A2C1931B3009A95CD /* DataModel.swift in Sources */,
 			);
@@ -283,17 +287,18 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BarebonesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Barebones;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -322,17 +327,18 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BarebonesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Barebones;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
