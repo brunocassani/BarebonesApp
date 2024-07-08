@@ -8,15 +8,14 @@
 import Foundation
 
 class Trajectory {
-    // Constants (default values, can be overridden)
-    var L = 0.695                           // Length of arrow (nock throat to tip) (m)
-    var W = 0.00092583                      // Width of the arrow (diameter) (m)
-    var M = 0.023275768                     // Mass of the arrow (kg)
-    var C = 0.23                            // Drag coefficient (unitless)
-    var v0 = 81.3816                        // Initial velocity (m/s)
-    var sightHeight = 0.0904748             // Sight height (meters)
-
+    
+    var climate: ClimateData
+    var arrow: ArrowData
+    var bow: BowData
+    var sight: SightData
+    
     // Other constants
+    var C = 0.23                            // Drag coefficient (unitless)
     let g = 9.80665                         // Gravitational acceleration (m/s^2)
     var rho: Double = 0.0                   // Density of air (kg/m^3)
     let pi = 3.14159265358979323846         // Pi (unitless)
@@ -24,30 +23,22 @@ class Trajectory {
     
     // Cross-sectional area (m^2)
     var A: Double {
-        return L * W
+        return arrow.lengthMeters * arrow.diameterMeters
     }
 
-    init(){
+    init(climate: ClimateData, arrow: ArrowData, bow: BowData, sight: SightData){
+        self.climate = climate
+        self.arrow = arrow
+        self.bow = bow
+        self.sight = sight
         
-    }
-    // Constructor
-    init(L: Double, W: Double, M: Double, C: Double, v0: Double, sightHeight: Double) {
-        self.L = L
-        self.W = W
-        self.M = M
-        self.C = C
-        self.v0 = v0
-        self.sightHeight = sightHeight
     }
 
     // Calculate air density function
     func calculateAirDensity(tempDew: Double, airPressure: Double, temp: Double) -> Double {
         // Convert inputs to appropriate units
-        let airPressurePascals = airPressure * 1000  // Convert from kilopascals to pascals
-        let tempKelvin = temp + 273.15                // Convert from Celsius to Kelvin
-
-        // Constants
-        let e = 2.718281828459045
+        let airPressurePascals = climate.pressureKPA * 1000  // Convert from kilopascals to pascals
+        let tempKelvin = climate.temperatureCelsius + 273.15                // Convert from Celsius to Kelvin
 
         // Calculations
         let vaporPressure = 611 * exp((17.27 * tempDew) / (237.3 + tempDew))  // Pascals
@@ -61,20 +52,20 @@ class Trajectory {
     // Find x position function
     func find_x_position(thetaDeg: Double) -> Double {
         let theta = thetaDeg * pi / 180  // Launch angle in radians
-        var y = sightHeight              // Initial height
+        var y = bow.peepToPinMeters              // Initial height
 
         // Initial variables
         var x = 0.0
-        var vx = v0 * cos(theta)
-        var vy = v0 * sin(theta)
+        var vx = arrow.speedMPS * cos(theta)
+        var vy = arrow.speedMPS * sin(theta)
 
         // Simulation loop
-        while y >= sightHeight {
+        while y >= bow.peepToPinMeters {
             // Update velocity
             let v = sqrt(vx * vx + vy * vy)
             let F_drag = 0.5 * rho * A * C * v * v
-            let ax = -F_drag * (vx / v) / M
-            let ay = -g - F_drag * (vy / v) / M
+            let ax = -F_drag * (vx / v) / arrow.weightKg
+            let ay = -g - F_drag * (vy / v) / arrow.weightKg
 
             // Update momentum
             vx += ax * tolerance
@@ -94,7 +85,7 @@ class Trajectory {
         var angles: [[Double]] = []
 
         // Iterate over the target x_distances in increments of 1 yard (converted to meters)
-        for targetDistance in stride(from: 20 / 1.09361, through: 120 / 1.09361, by: 1) {
+        for targetDistance in stride(from: sight.minRange / 1.09361, through: sight.maxRange / 1.09361, by: 1) {
             var thetaLow = 0.0
             var thetaHigh = 20.0
             var thetaMid = 0.0
