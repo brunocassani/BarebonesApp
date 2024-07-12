@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5343BFB12C29B0B8008773E6 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343BFB02C29B0B8008773E6 /* PDFView.swift */; };
+		5343BFB12C29B0B8008773E6 /* PDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343BFB02C29B0B8008773E6 /* PDFViewer.swift */; };
+		539C5C5F2C417F4A00296113 /* PDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C5C5E2C417F4A00296113 /* PDFGenerator.swift */; };
 		53D157FB2C1930F3009A95CD /* BarebonesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */; };
 		53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D157FC2C1930F3009A95CD /* ContentView.swift */; };
 		53D157FF2C1930F8009A95CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D157FE2C1930F8009A95CD /* Assets.xcassets */; };
@@ -18,7 +19,8 @@
 
 /* Begin PBXFileReference section */
 		530D225B2C2328B9004DBBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5343BFB02C29B0B8008773E6 /* PDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
+		5343BFB02C29B0B8008773E6 /* PDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewer.swift; sourceTree = "<group>"; };
+		539C5C5E2C417F4A00296113 /* PDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFGenerator.swift; sourceTree = "<group>"; };
 		53D157F72C1930F3009A95CD /* BarebonesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarebonesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarebonesAppApp.swift; sourceTree = "<group>"; };
 		53D157FC2C1930F3009A95CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,9 +64,10 @@
 				530D225B2C2328B9004DBBE7 /* Info.plist */,
 				53D157FA2C1930F3009A95CD /* BarebonesAppApp.swift */,
 				53D157FC2C1930F3009A95CD /* ContentView.swift */,
-				5343BFB02C29B0B8008773E6 /* PDFView.swift */,
+				5343BFB02C29B0B8008773E6 /* PDFViewer.swift */,
 				53D2997E2C36F21C004628EF /* Trajectory.swift */,
 				53D158092C1931B3009A95CD /* DataModel.swift */,
+				539C5C5E2C417F4A00296113 /* PDFGenerator.swift */,
 				53D157FE2C1930F8009A95CD /* Assets.xcassets */,
 				53D158002C1930F8009A95CD /* BarebonesApp.entitlements */,
 				53D158012C1930F8009A95CD /* Preview Content */,
@@ -151,7 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D157FD2C1930F3009A95CD /* ContentView.swift in Sources */,
-				5343BFB12C29B0B8008773E6 /* PDFView.swift in Sources */,
+				5343BFB12C29B0B8008773E6 /* PDFViewer.swift in Sources */,
+				539C5C5F2C417F4A00296113 /* PDFGenerator.swift in Sources */,
 				53D157FB2C1930F3009A95CD /* BarebonesAppApp.swift in Sources */,
 				53D1580A2C1931B3009A95CD /* DataModel.swift in Sources */,
 				53D2997F2C36F21C004628EF /* Trajectory.swift in Sources */,
