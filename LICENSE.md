@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2024	Bruno Cassani
+Copyright (c) 2024	Bruno Cassani,
 			Guido Cassani
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
